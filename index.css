@@ -1,0 +1,70 @@
+html, body {
+	background-color: #333;
+	text-align: center;
+}
+
+* {
+	color: #eee;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-radius: 4px;
+}
+
+#faq {
+	visibility: hidden;
+}
+
+form * {
+	font-size: 1em;
+	background-color: #444;
+	border: none;
+	padding: 0.5em;
+	height: 100%;
+	margin: 0.1em;
+}
+
+input[type="text"] {
+	text-align: left;
+	width: 50%;
+}
+
+input[type="submit"]:hover {
+	background-color: #555;
+	cursor: pointer;
+}
+
+a, input[type=checkbox] {
+	cursor: pointer;
+}
+
+label {
+	user-select: none;
+}
+
+ul {
+	text-align: left;
+}
+
+a:link, a:visited {
+	color: cadetblue;
+	text-decoration: none;
+}
+
+a:hover {
+	color: cyan;
+	text-decoration: none;
+}
+
+a:active {
+	color: blue;
+	text-decoration: none;
+}
+
+#bad_search {
+	display: block; /* changed in runtime to be none */
+	/* colors stolen directly from duckduckgo */
+	color: #de5833;
+	background: #f7d5cc;
+	margin: .5em auto 1.25em;
+	padding: 1em;
+	max-width: 590px;
+}
