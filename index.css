@@ -68,3 +68,7 @@ a:active {
 	padding: 1em;
 	max-width: 590px;
 }
+
+.left {
+	text-align: left;
+}
