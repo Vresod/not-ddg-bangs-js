@@ -71,13 +71,14 @@ let extract = (bang_str,bangs,shortcuts) => {
 let raw_args = location.search.replace("?","").split("&");
 let args = {};
 
-if(raw_args === ['']){
+raw_args.forEach(argument => {
+	let arg = argument.split("=");
+	args[arg[0]] = decodeURIComponent(arg[1].replaceAll("+"," "));
+});
+
+if(args.q === ""){
 	location.replace("/?e=5");
 }
 
-raw_args.forEach(argument => {
-	let arg = argument.split("=");
-	args[arg[0]] = decodeURIComponent(arg[1]).replaceAll("+"," ");
-});
-
 location.replace(search(args));
+// console.log(search(args));
