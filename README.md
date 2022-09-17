@@ -5,7 +5,7 @@ its kinda like duckduckgo bangs but with the ability to add your own. yes!
 
 # how do I run it
 
-make your webserver point `/` to `index.html`. alternatively, use [github pages](https://not_ddg_bangs.github.io).
+make your webserver point `/` to `index.html`. alternatively, use [github pages](https://not-ddg-bangs.github.io).
 
 # why did you rewrite it in js
 
