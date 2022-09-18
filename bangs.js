@@ -17,7 +17,8 @@ let bangs = {
 		"mg": "https://minecraft.fandom.com/wiki/Special:Search?search=%s",
 		"vl": "https://vimm.net/vault/?p=list&q=%s",
 		"tn": "https://yal.cc/r/terranion/?q=%s",
-		"pcb": "https://polcompball.miraheze.org/wiki/Special:Search?query=%s"
+		"pcb": "https://polcompball.miraheze.org/wiki/Special:Search?query=%s",
+		"jojo": "https://jojowiki.com/index.php?search=%s"
 	},
 	"shortcuts": {
 		"w": "https://%s.wikipedia.org/wiki/Special:Search?search=%s",
