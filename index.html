@@ -8,6 +8,7 @@
 	<link href="/index.css" rel='stylesheet'>
 	<link rel="shortcut icon" href="favicon.png">
 	<script>var faqon = false;</script>
+	<script src="/bangs.js"></script>
 </head>
 <body>
 	<h1>Not DuckDuckGo Bangs</h1>
@@ -16,15 +17,18 @@
 		<input type="text" name=q placeholder="!tw demon eye">
 		<input type="submit" value="Search">
 		<br>
+		<span>
+		<label for=engine>Search engine: </label>
 		<select id=engine name=engine>
-			<option value=>Search engine...</option>
-			<!-- {% for engine in engines %} -->
+			<!-- <option value=>Search engine...</option> -->
+			<!-- {% for engine in engines %}
 			<option value="DuckDuckGo">DuckDuckGo</option>
 			<option value="Google">Google</option>
 			<option value="Ecosia">Ecosia</option>
 			<option value="Bing">Bing</option>
-			<!-- {% endfor %} -->
+			{% endfor %} -->
 		</select>
+		</span>
 		<!-- <span id=dibbox>
 		<label for=dib>Use DuckDuckGo bangs regardless?</label>
 		<input type="checkbox" name=dib id=dib> -->
@@ -54,6 +58,12 @@
 		let raw_args = location.search.replace("?","").split("&");let args = {}; raw_args.forEach(argument => { let arg = argument.split("="); args[arg[0]] = arg[1]; });
 		if(!args["e"]) {
 			document.getElementById("bad_search").style = "display: none;"
+		}
+	</script>
+	<script>
+		let selector = document.getElementById("engine")
+		for(let engine in engines) {
+			selector.innerHTML += `<option value="${engine}">${engine}</option>`
 		}
 	</script>
 </body>
