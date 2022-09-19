@@ -48,8 +48,16 @@ let extract = (bang_str,bangs,shortcuts) => {
 	for(let shortcut in shortcuts) {
 		if(bang_str.startsWith(`!${shortcut}.`)){ // shortcut situation
 			extracted.bang = shortcut;
-			extracted.shortcut = (d = bang_str.replace(`!${shortcut}.`,"").split(" ",1))[0];
-			extracted.term = d.length() > 1 ? d[1] : "";
+			d1 = bang_str.replace(`!${shortcut}.`,"");
+ 			/* the stupidest line of code in this whole thing, somehow
+			 * i did this using str.split(maxsplit=1) in python and used exactly 0 str.index calls (at least not in *my* code)
+			 * but js has no maxsplit option, so this was the best alternative
+			 * :/
+			*/
+			d2 = [d1.slice(0,d1.indexOf(" ")),d1.slice(d1.indexOf(" ") + 1)]
+			console.log(d2)
+			extracted.shortcut = d2[0]
+			extracted.term = d2.length > 1 ? d2[1] : "";
 			return extracted;
 		}
 	};
@@ -80,5 +88,5 @@ if(args.q === ""){
 	location.replace("/?e=5");
 }
 
-location.replace(search(args));
-// console.log(search(args));
+// location.replace(search(args));
+console.log(search(args));
