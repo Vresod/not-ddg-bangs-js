@@ -88,5 +88,5 @@ if(args.q === ""){
 	location.replace("/?e=5");
 }
 
-// location.replace(search(args));
-console.log(search(args));
+location.replace(search(args));
+// console.log(search(args));
