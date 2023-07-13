@@ -19,7 +19,8 @@ let bangs = {
 		"tn": "https://yal.cc/r/terranion/?q=%s",
 		"pcb": "https://polcompball.miraheze.org/wiki/Special:Search?query=%s",
 		"jojo": "https://jojowiki.com/index.php?search=%s",
-		"sgdb": "https://www.steamgriddb.com/search/grids?term=%s"
+		"sgdb": "https://www.steamgriddb.com/search/grids?term=%s",
+		"dw": "https://wiki.dolphin-emu.org/index.php?search=%s&title=Special%3ASearch&go=Go"
 	},
 	"shortcuts": {
 		"w": "https://%s.wikipedia.org/wiki/Special:Search?search=%s",
