@@ -4,9 +4,9 @@ let search = async args => {
 		let engine = args.engine || "DuckDuckGo";
 		let ddg_if_bang = Boolean(args["dib"]);
 		let extracted = extract(query, bangs.bangs, bangs.shortcuts);
-		console.log(extracted);
 		if (ddg_if_bang && engine !== "DuckDuckGo" && query.startsWith("!") && !extracted.bang) {
-			if (await http_get(`https://api.duckduckgo.com/?q=${query}&format=json&no_redirect=1`).Redirect) {
+			const json = await http_get(`https://api.duckduckgo.com/?q=${query}&format=json&no_redirect=1`)
+			if (json.Redirect) {
 				return engines.DuckDuckGo.replace("%s", query);
 			}
 		}
@@ -94,6 +94,7 @@ if (args.q === "") {
 
 window.addEventListener("load", async () => {
 	let query = await search(args)
-	location.replace(query);
+	console.log(query)
+	// location.replace(query);
 })
 // console.log(search(args));
