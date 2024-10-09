@@ -93,7 +93,7 @@ if (args.q === "") {
 }
 
 window.addEventListener("load", async () => {
-	let query = search(args)
+	let query = await search(args)
 	location.replace(query);
 })
 // console.log(search(args));
