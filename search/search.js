@@ -1,4 +1,4 @@
-let search = (args) => {
+let search = async args => {
 	if (!args[0]) {
 		let query = args.q;
 		let engine = args.engine || "DuckDuckGo";
@@ -6,7 +6,7 @@ let search = (args) => {
 		let extracted = extract(query, bangs.bangs, bangs.shortcuts);
 		console.log(extracted);
 		if (ddg_if_bang && engine !== "DuckDuckGo" && query.startsWith("!") && !extracted.bang) {
-			if (http_get(`https://api.duckduckgo.com/?q=${query}&format=json&no_redirect=1`).Redirect) {
+			if (await http_get(`https://api.duckduckgo.com/?q=${query}&format=json&no_redirect=1`).Redirect) {
 				return engines.DuckDuckGo.replace("%s", query);
 			}
 		}
@@ -35,11 +35,11 @@ let get_root = (url) => {
 	return match[0];
 }
 
-let http_get = url => { // NOT stolen from w3docs.com
-	fetch(url).then(async r => {
-		let json = r.json();
-	})
-	return json
+let http_get = async url => { // NOT stolen from w3docs.com
+	let json;
+	r = await fetch(url);
+	json = await r.json();
+	return json;
 	// let req = new XMLHttpRequest();
 	// req.open("GET", url, false);
 	// req.send(null);
@@ -92,5 +92,5 @@ if (args.q === "") {
 	location.replace("/?e=5");
 }
 
-location.replace(search(args));
+location.replace(await search(args));
 // console.log(search(args));
