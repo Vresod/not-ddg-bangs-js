@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
 	<link href="/index.css" rel='stylesheet'>
 	<link rel="shortcut icon" href="favicon.png">
 </head>
+
 <body>
 	<h1>List of bangs on Not DDG Bangs</h1>
-	<p><a href=/>Return to main page...</a></p>
+	<p><a href= />Return to main page...</a></p>
 	<h2 class="left">Bangs</h2>
 	<ul id="bangs" class="left">
 	</ul>
@@ -19,12 +21,13 @@
 	</ul>
 	<script src="/bangs.js"></script>
 	<script>
-		for(let bang in bangs.bangs) {
+		for (let bang in bangs.bangs) {
 			document.getElementById("bangs").innerHTML += `<li><p><code>!${bang}</code> : ${bangs.bangs[bang]}`
 		}
-		for(let shortcut in bangs.shortcuts) {
+		for (let shortcut in bangs.shortcuts) {
 			document.getElementById("shortcuts").innerHTML += `<li><p><code>!${shortcut}</code> : ${bangs.shortcuts[shortcut]}`
 		}
 	</script>
-	</body>
+</body>
+
 </html>

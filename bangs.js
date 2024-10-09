@@ -32,8 +32,8 @@ let bangs = {
 };
 
 let engines = {
-	"DuckDuckGo":"https://duckduckgo.com?q=%s",
-	"Google":"https://google.com/search?q=%s",
-	"Ecosia":"https://www.ecosia.org/search?q=%s",
-	"Bing":"https://www.bing.com/search?q=%s"
+	"DuckDuckGo": "https://duckduckgo.com?q=%s",
+	"Google": "https://google.com/search?q=%s",
+	"Ecosia": "https://www.ecosia.org/search?q=%s",
+	"Bing": "https://www.bing.com/search?q=%s"
 };

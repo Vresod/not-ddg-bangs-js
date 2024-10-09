@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http_equiv="X_UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
 	<script>var faqon = false;</script>
 	<script src="/bangs.js"></script>
 </head>
+
 <body>
 	<h1>Not DuckDuckGo Bangs</h1>
 	<h2>remade in js because Heroku killed the free plan!</h2>
@@ -18,53 +20,58 @@
 		<input type="submit" value="Search">
 		<br>
 		<span>
-		<label for=engine>Search engine: </label>
-		<select id=engine name=engine>
-			<!-- <option value=>Search engine...</option> -->
-			<!-- {% for engine in engines %}
+			<label for=engine>Search engine: </label>
+			<select id=engine name=engine>
+				<!-- <option value=>Search engine...</option> -->
+				<!-- {% for engine in engines %}
 			<option value="DuckDuckGo">DuckDuckGo</option>
 			<option value="Google">Google</option>
 			<option value="Ecosia">Ecosia</option>
 			<option value="Bing">Bing</option>
 			{% endfor %} -->
-		</select>
+			</select>
 		</span>
-		<!-- <span id=dibbox>
-		<label for=dib>Use DuckDuckGo bangs regardless?</label>
-		<input type="checkbox" name=dib id=dib> -->
+		<span id=dibbox>
+			<label for=dib>Use DuckDuckGo bangs regardless?</label>
+			<input type="checkbox" name=dib id=dib>
 		</span>
 	</form>
 	<!-- {% if bad_search %} -->
 	<span id=bad_search>Empty search</span>
 	<!-- {% endif %} -->
-	<h2><a onclick="faqon = !faqon;document.getElementById('faq').style = 'visibility:' + (faqon ? 'visible' : 'hidden')">FAQ</a></h2>
+	<h2><a
+			onclick="faqon = !faqon;document.getElementById('faq').style = 'visibility:' + (faqon ? 'visible' : 'hidden')">FAQ</a>
+	</h2>
 	<div id=faq>
-	<h3>What is this?</h3>
-	<p>its like duckduckgo but only the bangs</p>
-	<h3>y tho</h3>
-	<p>i want to add bangs to ddg but it has restrictions on what gets added</p>
-	<h3>what even are these "bangs" you speak of</h3>
-	<p><a href="https://duckduckgo.com/bang">let DuckDuckGo tell you!</a></p>
-	<h3>what bangs do you have</h3>
-	<p><a href=/bangs>click here to find out</a></p>
-	<h3>what happened to the original?</h3>
-	<p>Heroku removed their free plan and I didn't want to pay for hosting so I moved to Github Pages. it's not perfect but it's much better than nothing.</p>
-	<p><small>BTW, the only way duckduckgo-if-bang can work is blocked by security features in browsers, so it's not longer with us. RIP</small></p>
-	<h3>can i see your source code?</h3>
-	<p>yes. <a href="https://github.com/not-ddg-bangs/not-ddg-bangs.github.io">here for the source code.</a></p>
-	</a>
+		<h3>What is this?</h3>
+		<p>its like duckduckgo but only the bangs</p>
+		<h3>y tho</h3>
+		<p>i want to add bangs to ddg but it has restrictions on what gets added</p>
+		<h3>what even are these "bangs" you speak of</h3>
+		<p><a href="https://duckduckgo.com/bang">let DuckDuckGo tell you!</a></p>
+		<h3>what bangs do you have</h3>
+		<p><a href=/bangs>click here to find out</a></p>
+		<h3>what happened to the original?</h3>
+		<p>Heroku removed their free plan and I didn't want to pay for hosting so I moved to Github Pages. it's not
+			perfect but it's much better than nothing.</p>
+		<p><small>BTW, the only way duckduckgo-if-bang can work is blocked by security features in browsers, so it's not
+				longer with us. RIP</small></p>
+		<h3>can i see your source code?</h3>
+		<p>yes. <a href="https://github.com/not-ddg-bangs/not-ddg-bangs.github.io">here for the source code.</a></p>
+		</a>
 	</div>
 	<script>
-		let raw_args = location.search.replace("?","").split("&");let args = {}; raw_args.forEach(argument => { let arg = argument.split("="); args[arg[0]] = arg[1]; });
-		if(!args["e"]) {
+		let raw_args = location.search.replace("?", "").split("&"); let args = {}; raw_args.forEach(argument => { let arg = argument.split("="); args[arg[0]] = arg[1]; });
+		if (!args["e"]) {
 			document.getElementById("bad_search").style = "display: none;"
 		}
 	</script>
 	<script>
 		let selector = document.getElementById("engine")
-		for(let engine in engines) {
+		for (let engine in engines) {
 			selector.innerHTML += `<option value="${engine}">${engine}</option>`
 		}
 	</script>
 </body>
+
 </html>

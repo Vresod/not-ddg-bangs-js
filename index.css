@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	background-color: #333;
 	text-align: center;
 }
@@ -32,7 +33,8 @@ input[type="submit"]:hover {
 	cursor: pointer;
 }
 
-a, input[type=checkbox] {
+a,
+input[type=checkbox] {
 	cursor: pointer;
 }
 
@@ -44,7 +46,8 @@ ul {
 	text-align: left;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
 	color: cadetblue;
 	text-decoration: none;
 }
@@ -60,7 +63,8 @@ a:active {
 }
 
 #bad_search {
-	display: block; /* changed in runtime to be none */
+	display: block;
+	/* changed in runtime to be none */
 	/* colors stolen directly from duckduckgo */
 	color: #de5833;
 	background: #f7d5cc;
