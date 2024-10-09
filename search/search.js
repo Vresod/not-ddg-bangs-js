@@ -2,7 +2,7 @@ let search = (args) => {
 	if (!args[0]) {
 		let query = args.q;
 		let engine = args.engine || "DuckDuckGo";
-		// let ddg_if_bang = Boolean(args["dib"]);
+		let ddg_if_bang = Boolean(args["dib"]);
 		let extracted = extract(query, bangs.bangs, bangs.shortcuts);
 		console.log(extracted);
 		if (ddg_if_bang && engine !== "DuckDuckGo" && query.startsWith("!") && !extracted.bang) {
