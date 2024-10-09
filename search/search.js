@@ -92,5 +92,8 @@ if (args.q === "") {
 	location.replace("/?e=5");
 }
 
-location.replace(await search(args));
+window.addEventListener("load", async () => {
+	let query = search(args)
+	location.replace(query);
+})
 // console.log(search(args));
