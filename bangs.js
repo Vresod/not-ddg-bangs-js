@@ -20,7 +20,11 @@ let bangs = {
 		"pcb": "https://polcompball.miraheze.org/wiki/Special:Search?query=%s",
 		"jojo": "https://jojowiki.com/index.php?search=%s",
 		"sgdb": "https://www.steamgriddb.com/search/grids?term=%s",
-		"dw": "https://wiki.dolphin-emu.org/index.php?search=%s&title=Special%3ASearch&go=Go"
+		"dw": "https://wiki.dolphin-emu.org/index.php?search=%s&title=Special%3ASearch&go=Go",
+		"pk": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"pw": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"pikmin": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"pikminwiki": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1"
 	},
 	"shortcuts": {
 		"w": "https://%s.wikipedia.org/wiki/Special:Search?search=%s",
