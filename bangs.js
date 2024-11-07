@@ -24,7 +24,10 @@ let bangs = {
 		"pk": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
 		"pw": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
 		"pikmin": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
-		"pikminwiki": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1"
+		"pikminwiki": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"uk": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"uw": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"ultrakillwiki": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1"
 	},
 	"shortcuts": {
 		"w": "https://%s.wikipedia.org/wiki/Special:Search?search=%s",
