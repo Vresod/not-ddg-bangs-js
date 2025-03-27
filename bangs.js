@@ -26,7 +26,12 @@ let bangs = {
 		"pikminwiki": "https://www.pikminwiki.com/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
 		"uk": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
 		"uw": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
-		"ultrakillwiki": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1"
+		"ultrakillwiki": "https://ultrakill.wiki.gg/index.php?search=%s&title=Special%3ASearch&go=Go&ns0=1",
+		"bw": "https://balatrogame.fandom.com/wiki/Special:Search?scope=internalquery=%s",
+		"bg": "https://balatrogame.fandom.com/wiki/Special:Search?scope=internalquery=%s",
+		"balatro": "https://balatrogame.fandom.com/wiki/Special:Search?scope=internalquery=%s",
+		"balatrogame": "https://balatrogame.fandom.com/wiki/Special:Search?scope=internalquery=%s",
+		"balatrowiki": "https://balatrogame.fandom.com/wiki/Special:Search?scope=internalquery=%s"
 	},
 	"shortcuts": {
 		"w": "https://%s.wikipedia.org/wiki/Special:Search?search=%s",
